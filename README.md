@@ -14,8 +14,9 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 * [React-icons](https://react-icons.github.io/react-icons/).
 
 # Preview
-
+Modo Light
 <img src="https://raw.githubusercontent.com/AndersonLongara/lista-tarefa/master/b4a037f3-5e90-4174-a55d-bd5421b9e1a1.jpg" width="550">
+Modo Dark
 <img src="https://raw.githubusercontent.com/AndersonLongara/lista-tarefa/master/c9d4488b-49b4-4189-947e-893dd454a977.jpg" width="550"> 
 
 # Começando
