@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
+import usePesistedState from './utils/usePersistedState';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
+
+import GlobalStyle from './styles/global';
+
+import Dashboard from './pages/Dashboard';
+
+import { TarefasProvider }  from './context/TarefasContext';
+
+const App: React.FC = () => {
+    const [tema, setTema] = usePesistedState<DefaultTheme>('theme', light);
+
+    const trocaTema = () => {
+        setTema(tema.title === 'light' ? dark : light)
+    };
+
+   return ( 
+        <ThemeProvider theme={tema}>
+            <GlobalStyle />
+            <TarefasProvider>
+                <Dashboard trocaTema={trocaTema} />
+            </TarefasProvider>
+        </ThemeProvider>
+   )}
 
 export default App;
