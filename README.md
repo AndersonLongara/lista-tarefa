@@ -7,6 +7,7 @@ Este projeto é uma sistema basico de genreciamento de tarefas, foi criado unma 
 Abaixo segue o que foi utilizado na criação deste projeto:
 
 * [React](https://pt-br.reactjs.org/).
+* [TypeScript](https://www.typescriptlang.org/).
 * [Local Storage].
 * [ContextApi](https://pt-br.reactjs.org/docs/context.html).
 * [Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html).
